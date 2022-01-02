@@ -14,7 +14,7 @@ namespace blackcomb::entity {
     public:
         virtual void loadViewMatrix(renderer::Shader& shader);
         void loadProjectionMatrix(renderer::Shader& shader, base::Window& window);
-        float fov = 90.0f; ///< Field of view of the camera.
+        float fov = 90.0f; //< Default field of view of the camera.
     };
 }
 

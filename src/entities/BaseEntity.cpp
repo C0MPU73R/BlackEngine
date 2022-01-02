@@ -7,6 +7,10 @@ namespace blackcomb::entity {
         updateTransMat();
     }
 
+    BaseEntity::~BaseEntity()
+    {
+    }
+
     /**
      * Set the position of the entity.
      */

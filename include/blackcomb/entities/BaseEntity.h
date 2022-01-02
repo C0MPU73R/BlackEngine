@@ -12,6 +12,7 @@ namespace blackcomb::entity {
     class BaseEntity {
     public:
         BaseEntity();
+        virtual ~BaseEntity(); // TODO
         void setPos(glm::vec3 position);
         void setPos(float x, float y, float z);
         glm::vec3 getPos();
