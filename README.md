@@ -1,7 +1,6 @@
-# Blackcomb
-Blackcomb is a game engine created by Ruby Lazuli (https://www.github.com/PatchMixolydic). 
-It is in very early development and not currently intended for public use.
-This fork will serve as a continuation of its development.
+# BlackEngine
+BlackEngine is a game engine concept originally based on the the concept engine Blackcomb created by Ruby Lazuli (https://www.github.com/PatchMixolydic). 
+BlackEngine is in it's very early stages. 
 
 ## Dependencies
-Blackcomb currently relies on GLFW and GLM.
+BlackEngine currently relies on GLFW and GLM.
