@@ -1,7 +1,12 @@
-#include "blackcomb/base/Window.h"
-#include "blackcomb/input/MouseWatcher.h"
+./*
+@filename: MouseWatcher.cpp
+@purpose: 
+*/
 
-namespace blackcomb::input {
+#include "blackengine/base/Window.h"
+#include "blackengine/input/MouseWatcher.h"
+
+namespace blackengine::input {
     bool MouseWatcher::shouldWatch = false;
 
     /**

@@ -1,11 +1,15 @@
+/*
+@filename: Shader.cpp
+@purpose: 
+*/
+
 #include <fstream>
-#include <iostream>
 #include <sstream>
 #include <assert.h>
-#include "blackcomb/renderer/Shader.h"
-#include "blackcomb/misc/BlackcombException.h"
+#include "blackengine/renderer/Shader.h"
+#include "blackengine/misc/blackengineException.h"
 
-namespace blackcomb::renderer {
+namespace blackengine::renderer {
     Shader::Shader(const std::string& vertexFilename, const std::string& fragmentFilename) {
         GLuint vertexShader = loadAndCompileShader(GL_VERTEX_SHADER, vertexFilename);
         reportCompileStatus(GL_VERTEX_SHADER, vertexShader);
@@ -129,7 +133,7 @@ namespace blackcomb::renderer {
      * @param val An array of floats to pass to the shader.
      * @param size The size of the vector.
      */
-    void Shader::setUniformVecF(const char* name, float* val, size_t size) {
+    void Shader::setUniformVecF(const char &name, float* val, size_t size) {
         GLint loc = glGetUniformLocation(program, name);
         switch (size) {
             case 1:
@@ -143,7 +147,7 @@ namespace blackcomb::renderer {
             default:
                 char msg[64];
                 snprintf(msg, 64, "Can't create a uniform Vec%i", (int) size);
-                throw misc::BlackcombException(msg);
+                throw misc::blackengineException(msg);
         }
     }
 

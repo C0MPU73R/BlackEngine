@@ -1,12 +1,17 @@
+/*
+@filename: Window.cpp
+@purpose: Window logic
+*/
+#ifndef STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 #include <iostream>
-#include <blackcomb/base/AppBase.h>
+#include <blackengine/base/AppBase.h>
 
-#include "blackcomb/misc/BlackcombException.h"
-#include "blackcomb/base/AppBase.h"
+#include "blackengine/misc/blackengineException.h"
+#include "blackengine/base/AppBase.h"
 
-namespace blackcomb::base {
+namespace blackengine::base {
     AppBase::AppBase(std::string winTitle) {
         stbi_set_flip_vertically_on_load(true);
         glfwInit();
@@ -16,7 +21,7 @@ namespace blackcomb::base {
         getWindow().makeContextCurrent();
 
         if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
-            throw misc::BlackcombException("Failed to initialize GLAD");
+            throw misc::blackengineException("Failed to initialize GLAD");
         }
 
         glEnable(GL_DEPTH_TEST);
@@ -79,7 +84,8 @@ namespace blackcomb::base {
     void AppBase::processInput() {}
 
     /**
-     * Called when the application is closing. Libraries should probably be cleaned up here.
+     * Called when the application is closing. Libraries should be cleaned up.
      */
     void AppBase::destroy() {}
 }
+#endif // !AppBase.cpp

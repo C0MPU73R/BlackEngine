@@ -1,9 +1,13 @@
+/*
+@filename: Window.cpp
+@purpose: Window logic
+*/
 #include <iostream>
-#include "blackcomb/misc/BlackcombException.h"
-#include "blackcomb/misc/Coords.h"
-#include "blackcomb/base/Window.h"
+#include "blackengine/misc/blackengineException.h"
+#include "blackengine/misc/Coords.h"
+#include "blackengine/base/Window.h"
 
-namespace blackcomb::base {
+namespace blackengine::base {
     Window::Window() : Window::Window(DefaultWinWidth, DefaultWinHeight, DefaultWinName) {}
 
     Window::Window(const char* name) : Window::Window(DefaultWinWidth, DefaultWinHeight, name) {}
@@ -18,7 +22,7 @@ namespace blackcomb::base {
 
         handle = glfwCreateWindow(width, height, name, nullptr, nullptr);
         if (handle == nullptr) {
-            throw misc::BlackcombException("Failed to create GLFW window");
+            throw misc::blackengineException("Failed to create GLFW window");
         }
 
         setFramebufferSizeCallback(defaultSizeCallback);

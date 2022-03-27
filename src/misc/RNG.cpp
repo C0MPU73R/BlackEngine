@@ -1,9 +1,16 @@
-#include "blackcomb/misc/RNG.h"
+./*
+@filename: RNG.cpp
+@purpose: Random number generation
+*/
 
-namespace blackcomb::misc {
-    RNG::RNG() : generator(rd()) {}
+#include "blackengine/misc/RNG.h"
 
-    RNG::RNG(unsigned long seed) : generator(seed) {}
+namespace blackengine::misc {
+    RNG::RNG():generator(rd()) {
+    }
+
+    RNG::RNG(unsigned long seed):generator(seed) {
+    }
 
     /**
      * Generates a random number in a range from min to max, inclusive.
@@ -21,7 +28,7 @@ namespace blackcomb::misc {
      */
     template<typename T>
     T RNG::random() {
-        return random < T > (0.0, 1.0);
+        return random <T> (0.0, 1.0);
     }
 
     /**

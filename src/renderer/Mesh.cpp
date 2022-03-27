@@ -1,6 +1,11 @@
-#include "blackcomb/renderer/Mesh.h"
+/*
+@filename: Renderer.cpp
+@purpose:
+*/
 
-namespace blackcomb::renderer {
+#include "blackengine/renderer/Mesh.h"
+
+namespace blackengine::renderer {
     Mesh::Mesh(std::vector<GLfloat> modelData, std::vector<GLuint> indices) : numVerts(
         modelData.size() / (3 /*xyz*/ + 3 /*rgb*/ + 2 /*uv*/)), numIndices(indices.size()) {
         glGenVertexArrays(1, &vao);
@@ -40,10 +45,14 @@ namespace blackcomb::renderer {
             modelData.push_back(vertex.uv.u);
             modelData.push_back(vertex.uv.v);
         }
-        new(this) Mesh(modelData, indices); // Yucky.
+        //new(this) Mesh(modelData, indices);
+        //TODO: Create the mesh elsewhere
     }
 
-    Mesh::Mesh() : Mesh(std::vector<GLfloat>{}, std::vector<GLuint>{}) {}
+    Mesh::Mesh(std::vector<GLfloat>{}, std::vector<GLuint>{}) {
+    }
+
+    //TODO: Destruction when no longer used.
 
     /**
      * Get rid of the mesh's OpenGL objects.

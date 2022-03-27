@@ -1,8 +1,13 @@
+/*
+@filename: FreeMoveCamera.cpp
+@purpose: Free-roaming camera functions
+*/
+
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "blackcomb/entities/FreeMoveCamera.h"
+#include "blackengine/entities/FreeMoveCamera.h"
 
-namespace blackcomb::entity {
+namespace blackengine::entity {
     void FreeMoveCamera::loadViewMatrix(renderer::Shader& shader) {
         glm::mat4 view(1.0f);
         view = glm::lookAt(pos, pos + front, up);

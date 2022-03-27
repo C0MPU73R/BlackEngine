@@ -1,8 +1,13 @@
+/*
+@filename: BaseEntity.cpp
+@purpose: 
+*/
+
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
-#include "blackcomb/entities/BaseEntity.h"
+#include "blackengine/entities/BaseEntity.h"
 
-namespace blackcomb::entity {
+namespace blackengine::entity {
     BaseEntity::BaseEntity() {
         updateTransMat();
     }

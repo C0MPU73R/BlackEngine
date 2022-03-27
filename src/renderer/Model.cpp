@@ -1,10 +1,22 @@
+/*
+@filename: Model.cpp
+@purpose: Model processing
+*/
+
 #include <iostream>
-#include "blackcomb/renderer/Model.h"
+#include "blackengine/renderer/Model.h"
 
-namespace blackcomb::renderer {
-    Model::Model(Mesh mesh, Texture texture) : mesh(mesh), texture(texture) {}
+namespace blackengine::renderer {
 
-    Model::Model() : mesh(Mesh(std::vector<float>{}, {})), texture(Texture(MissingTextureFilename)) {}
+    Model::Model() {
+        //ctor default
+    }
+
+    Model::Model(Mesh mesh, Texture texture) : mesh(mesh), texture(texture) {
+    }
+
+    Model::mesh(Mesh(std::vector<float>{}, {})), texture(Texture(MissingTextureFilename)) {
+    }
 
     void Model::cleanup() {
         mesh.cleanup();

@@ -1,7 +1,12 @@
-#include <glm/gtc/type_ptr.hpp>
-#include "blackcomb/entities/RenderableEntity.h"
+/*
+@filename: RenderableEntity.cpp
+@purpose: To be rendered
+*/
 
-namespace blackcomb::entity {
+#include <glm/gtc/type_ptr.hpp>
+#include "blackengine/entities/RenderableEntity.h"
+
+namespace blackengine::entity {
     RenderableEntity::RenderableEntity(renderer::Model& model) : model(model) {}
 
     /**

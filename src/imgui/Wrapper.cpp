@@ -1,9 +1,14 @@
+/*
+@filename: Wrapper.cpp
+@purpose:
+*/
+
 #include <glfw3.h>
-#include <blackcomb/imgui/Wrapper.h>
+#include <blackengine/imgui/Wrapper.h>
 
-#include "blackcomb/imgui/Wrapper.h"
+#include "blackengine/imgui/Wrapper.h"
 
-namespace blackcomb::imgui {
+namespace blackengine::imgui {
     /**
      * Creates the ImGui context. Call this before any other ImGui function!
      */

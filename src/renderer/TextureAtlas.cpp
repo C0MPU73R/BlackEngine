@@ -1,6 +1,10 @@
-#include "blackcomb/renderer/TextureAtlas.h"
+/*
+@filename: TextureAtlas.cpp
+@purpose:
+*/
+#include "blackengine/renderer/TextureAtlas.h"
 
-namespace blackcomb::renderer {
+namespace blackengine::renderer {
     TextureAtlas::TextureAtlas(const std::string& textureFilename, int textureWidth, int textureHeight) :
         textureWidth(textureWidth), textureHeight(textureHeight), atlas(Texture(textureFilename.c_str())) {
         numColumns = atlas.getWidth() / textureWidth;

@@ -1,8 +1,13 @@
+/*
+@filename: Camera.cpp
+@purpose: Main camera with basic traversals and rotations
+*/
+
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "blackcomb/entities/Camera.h"
+#include "blackengine/entities/Camera.h"
 
-namespace blackcomb::entity {
+namespace blackengine::entity {
     /**
      * Generate a view matrix and load it into a shader.
      *

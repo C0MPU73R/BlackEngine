@@ -1,8 +1,12 @@
-#include <stb_image.h>
-#include <iostream>
-#include "blackcomb/renderer/Texture.h"
+/*
+@filename: Texture.cpp
+@purpose:
+*/
 
-namespace blackcomb::renderer {
+#include <stb_image.h>
+#include "blackengine/renderer/Texture.h" //explicit path
+
+namespace blackengine::renderer {
     Texture::Texture(const char* filename) {
         glGenTextures(1, &textureId);
         glBindTexture(GL_TEXTURE_2D, textureId);
