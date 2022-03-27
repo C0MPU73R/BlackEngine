@@ -1,11 +1,7 @@
-# Blackcomb
-Blackcomb is intended to be a game engine.
-
-@attention Blackcomb is a work in progress and is still VERY incomplete.
-Don't expect much out of it!
-
-To learn more about Blackcomb's API, check out the [class list](annotated.html).
+# BlackEngine
+BlackEngine is a game engine concept based on the concept engine Blackcomb authored by PatchMixolydic/Ruby Lazuli (https://www.github.com/PatchMixolydic). 
+BlackEngine is in it's very early stages. 
 
 ## Dependencies
-Blackcomb relies on GLFW3 and GLM. Debian and Ubuntu users can
+BlackEngine relies on GLFW3 and GLM. Debian and Ubuntu users can
 get these via `sudo apt upgrade && sudo apt install libglfw3-dev libglm-dev`.
